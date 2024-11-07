@@ -1,0 +1,5 @@
+docker run --rm \
+            --mount type=bind,src=$PWD/Packages,dst=/home/mediapipe/Packages \
+            --mount type=bind,src=$PWD/Assets,dst=/home/mediapipe/Assets \
+            mediapipe_unity:latest \
+            python build.py build --bazel_build_opts="" --desktop gpu --opencv cmake -vv
